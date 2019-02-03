@@ -1,0 +1,21 @@
+97% tests passed, 1 tests failed out of 33
+
+Label Time Summary:
+GTest              =  13.37 sec*proc (33 tests)Errors while running CTest
+
+IntegrationTest    =   4.99 sec*proc (3 tests)
+MpiTest            =   1.30 sec*proc (3 tests)
+UnitTest           =   8.38 sec*proc (30 tests)
+
+Total Test time (real) =  13.53 sec
+
+The following tests FAILED:
+	 13 - MdrunUtilityMpiUnitTests (Failed)
+CMakeFiles/run-ctest-nophys.dir/build.make:57: recipe for target 'CMakeFiles/run-ctest-nophys' failed
+make[3]: *** [CMakeFiles/run-ctest-nophys] Error 8
+CMakeFiles/Makefile2:1385: recipe for target 'CMakeFiles/run-ctest-nophys.dir/all' failed
+make[2]: *** [CMakeFiles/run-ctest-nophys.dir/all] Error 2
+CMakeFiles/Makefile2:1166: recipe for target 'CMakeFiles/check.dir/rule' failed
+make[1]: *** [CMakeFiles/check.dir/rule] Error 2
+Makefile:626: recipe for target 'check' failed
+make: *** [check] Error 2
