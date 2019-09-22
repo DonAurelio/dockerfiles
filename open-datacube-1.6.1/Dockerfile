@@ -27,8 +27,11 @@ RUN chown cube:root /dc_storage /source_storage
 USER cube
 
 ENV PATH "$HOME/anaconda/bin:$PATH"
+# This variables may be changed according with 
+# the version of gdal installed
+ENV GDAL_DATA "/usr/share/gdal/2.3"
+ENV PATH "/home/cube/.local/bin:$PATH"
 
-# Install miniconda
 WORKDIR /home/cube/
 
 # Run commands as cube user

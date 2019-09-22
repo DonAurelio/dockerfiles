@@ -2,7 +2,6 @@
 
 This image contans:
 
-* miniconda
 * datacube 1.6.1
 * Python 3.6.7
 
