@@ -58,7 +58,8 @@ RUN apt-get -y update \
     && pip3 install wheel 'setuptools_scm[toml]' cython \
     && pip3 install 'pyproj==2.*' 'datacube[all]' --no-binary=rasterio,pyproj,shapely,fiona,psycopg2,netCDF4,h5py \
     && pip3 install jupyterlab \
-    && apt-get -y install gdal-bin --no-install-recommends
+    && apt-get -y install gdal-bin --no-install-recommends \
+    && pip3 install GDAL==$(gdal-config --version)
 
 WORKDIR /home/datacube
 
