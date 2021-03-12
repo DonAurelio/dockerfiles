@@ -19,7 +19,6 @@ RUN apt-get -y update \
         python3-dev \
         python3-pip \
         python3-venv \
-        python3-gdal \
         libyaml-dev \
         libpq-dev \
         libproj-dev \
@@ -46,7 +45,6 @@ RUN apt-get -y update \
         sudo \
         git \
         wget \
-    && sudo apt remove python3-numpy \
     && adduser --uid 1024 --disabled-password --gecos "" datacube \
     && echo "datacube:datacube" | chpasswd \
     && usermod -aG sudo datacube \
