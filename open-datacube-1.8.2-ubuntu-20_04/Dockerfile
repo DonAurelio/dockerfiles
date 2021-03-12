@@ -44,7 +44,6 @@ RUN apt-get -y update \
         sudo \
         git \
         wget \
-    && apt-get install gdal-bin --no-install-recommends \
     && adduser --uid 1024 --disabled-password --gecos "" datacube \
     && echo "datacube:datacube" | chpasswd \
     && usermod -aG sudo datacube \
@@ -58,7 +57,8 @@ RUN apt-get -y update \
     && pip3 install setuptools \
     && pip3 install wheel 'setuptools_scm[toml]' cython \
     && pip3 install 'pyproj==2.*' 'datacube[all]' --no-binary=rasterio,pyproj,shapely,fiona,psycopg2,netCDF4,h5py \
-    && pip3 install jupyterlab
+    && pip3 install jupyterlab \
+    && apt-get install gdal-bin --no-install-recommends \
 
 WORKDIR /home/datacube
 
