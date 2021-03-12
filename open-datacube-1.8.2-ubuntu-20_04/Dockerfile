@@ -37,7 +37,6 @@ RUN apt-get -y update \
         libgdal-doc \
         hdf5-tools \
         netcdf-bin \
-        gdal-bin \
         postgresql \
         pgadmin3 \
         tar \
@@ -45,6 +44,7 @@ RUN apt-get -y update \
         sudo \
         git \
         wget \
+    && apt install gdal-bin --no-install-recommends \
     && adduser --uid 1024 --disabled-password --gecos "" datacube \
     && echo "datacube:datacube" | chpasswd \
     && usermod -aG sudo datacube \
